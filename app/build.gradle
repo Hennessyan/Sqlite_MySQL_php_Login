@@ -35,11 +35,15 @@ dependencies {
 //    compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.facebook.stetho:stetho:1.4.2'
     compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
-    compile 'com.google.android.gms:play-services:9.0.2'
+    compile 'com.google.android.gms:play-services:9.8.0'    //changed to 9.8.0 from 9.0.2 to avoid version conflict
 //  MySQL
     compile files('libs/jsch-0.1.52.jar')
     testCompile 'junit:junit:4.12'
 //  Log In
     compile 'com.android.support:design:25.0.1'
     compile 'com.jakewharton:butterknife:7.0.1'
+//  Google Log In
+    compile 'com.google.android.gms:play-services-auth:9.8.0'
 }
+//Google Log in
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "590986142694",
+    "project_id": "bulogin-167819"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590986142694:android:de78c838ade22cd8",
+        "android_client_info": {
+          "package_name": "com.llu17.youngq.sqlite_gps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590986142694-27fkjvu696bvmfhdglqv2vpco5pnkjuh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.llu17.youngq.sqlite_gps",
+            "certificate_hash": "c42e77363d0c6baf1c245a08f1d25b2348dfe1e3"
+          }
+        },
+        {
+          "client_id": "590986142694-8d2b16bm364v5b8fb84sqren37abauda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPaRjOirAVH45gX765P4mCr49arPXPPww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

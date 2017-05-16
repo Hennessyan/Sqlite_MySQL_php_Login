@@ -10,98 +10,122 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <Button
-        android:text="Start"
-        android:onClick="startService"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/Start_Button" />
+        android:orientation="vertical"
+        android:id="@+id/Collection_section">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Start"
+                android:onClick="startService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Start_Button" />
 
-    <Button
-        android:text="Stop"
-        android:onClick="stopService"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/Stop_Button" />
+            <Button
+                android:text="Stop"
+                android:onClick="stopService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Stop_Button" />
+        </LinearLayout>
 
+        <TextView
+            android:text="Auto Check WiFi and Upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Auto_Upload"
+                android:onClick="uploadService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Auto_Upload_Button"/>
+
+            <Button
+                android:text="Auto_Break"
+                android:onClick="breakService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Auto_Break_Button" />
+        </LinearLayout>
+
+        <TextView
+            android:text="Manual Upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:text="Manu_Upload"
+                android:onClick="uploadServiceM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Manu_Upload_Button"/>
+
+            <Button
+                android:text="Manu_Break"
+                android:onClick="breakServiceM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/Manu_Break_Button" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upload finished!"
+            android:textSize="30sp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:id="@+id/Upload_State"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logout"
+            android:id="@+id/Log_Out_Button"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
-    <TextView
-        android:text="Auto Check WiFi and Upload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
-        android:layout_gravity="center_horizontal"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
+    <com.google.android.gms.common.SignInButton
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="Auto_Upload"
-            android:onClick="uploadService"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Auto_Upload_Button"/>
-
-        <Button
-            android:text="Auto_Break"
-            android:onClick="breakService"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Auto_Break_Button" />
-
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/Log_In_Button"
+        ></com.google.android.gms.common.SignInButton>
 
     <TextView
-        android:text="Manual Upload"
+        android:id="@+id/TV_Error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
-        android:layout_gravity="center_horizontal"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="Manu_Upload"
-            android:onClick="uploadServiceM"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Manu_Upload_Button"/>
-
-        <Button
-            android:text="Manu_Break"
-            android:onClick="breakServiceM"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/Manu_Break_Button" />
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="upload finished!"
-        android:textSize="30sp"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center"
-        android:id="@+id/Upload_State"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/logout"
-        android:id="@+id/Log_Out_Button"
+        android:text="Please use Binghamton email address!"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"/>
+
 
 </LinearLayout>
