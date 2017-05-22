@@ -160,7 +160,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update gps_location set Tag = 1 where timestamp between ? and ?", new Object[]{gpses.get(0).getTimestamp(), gpses.get(gpses.size() - 1).getTimestamp()});
+//                            db1.execSQL("update gps_location set Tag = 1 where timestamp between ? and ?", new Object[]{gpses.get(0).getTimestamp(), gpses.get(gpses.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from gps_location where timestamp between ? and ?", new Object[]{gpses.get(0).getTimestamp(), gpses.get(gpses.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
@@ -192,7 +193,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update accelerometer set Tag = 1 where timestamp between ? and ?", new Object[]{acces.get(0).getTimestamp(), acces.get(acces.size() - 1).getTimestamp()});
+//                            db1.execSQL("update accelerometer set Tag = 1 where timestamp between ? and ?", new Object[]{acces.get(0).getTimestamp(), acces.get(acces.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from accelerometer where timestamp between ? and ?", new Object[]{acces.get(0).getTimestamp(), acces.get(acces.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
@@ -224,7 +226,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update gyroscope set Tag = 1 where timestamp between ? and ?", new Object[]{gyros.get(0).getTimestamp(), gyros.get(gyros.size() - 1).getTimestamp()});
+//                            db1.execSQL("update gyroscope set Tag = 1 where timestamp between ? and ?", new Object[]{gyros.get(0).getTimestamp(), gyros.get(gyros.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from gyroscope where timestamp between ? and ?", new Object[]{gyros.get(0).getTimestamp(), gyros.get(gyros.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
@@ -256,7 +259,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update step set Tag = 1 where timestamp between ? and ?", new Object[]{steps.get(0).getTimestamp(), steps.get(steps.size() - 1).getTimestamp()});
+//                            db1.execSQL("update step set Tag = 1 where timestamp between ? and ?", new Object[]{steps.get(0).getTimestamp(), steps.get(steps.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from step where timestamp between ? and ?", new Object[]{steps.get(0).getTimestamp(), steps.get(steps.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
@@ -288,7 +292,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update motionstate set Tag = 1 where timestamp between ? and ?", new Object[]{motions.get(0).getTimestamp(), motions.get(motions.size() - 1).getTimestamp()});
+//                            db1.execSQL("update motionstate set Tag = 1 where timestamp between ? and ?", new Object[]{motions.get(0).getTimestamp(), motions.get(motions.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from motionstate where timestamp between ? and ?", new Object[]{motions.get(0).getTimestamp(), motions.get(motions.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
@@ -320,7 +325,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update wifi set Tag = 1 where timestamp between ? and ?", new Object[]{wifis.get(0).getTimestamp(), wifis.get(wifis.size() - 1).getTimestamp()});
+//                            db1.execSQL("update wifi set Tag = 1 where timestamp between ? and ?", new Object[]{wifis.get(0).getTimestamp(), wifis.get(wifis.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from wifi where timestamp between ? and ?", new Object[]{wifis.get(0).getTimestamp(), wifis.get(wifis.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
@@ -352,7 +358,8 @@ public class UploadService extends Service implements VariableManager.Listener{
                     db1 = dbHelper.getWritableDatabase();
                     try {
                         if (db1 != null) {
-                            db1.execSQL("update battery set Tag = 1 where timestamp between ? and ?", new Object[]{batteries.get(0).getTimestamp(), batteries.get(batteries.size() - 1).getTimestamp()});
+//                            db1.execSQL("update battery set Tag = 1 where timestamp between ? and ?", new Object[]{batteries.get(0).getTimestamp(), batteries.get(batteries.size() - 1).getTimestamp()});
+                            db1.execSQL("delete from battery where timestamp between ? and ?", new Object[]{batteries.get(0).getTimestamp(), batteries.get(batteries.size() - 1).getTimestamp()});
                         } else {
                             Log.e("db1~~~~~~", "null");
                         }
