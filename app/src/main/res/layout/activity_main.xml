@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.llu17.youngq.sqlite_gps.MainActivity">
+    android:background="@color/green"
+    tools:context="com.llu17.youngq.data_collection.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
